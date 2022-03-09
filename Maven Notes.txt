@@ -1,0 +1,85 @@
+Build Testing Tools:
+Ant - previously used
+Maven - Currently used
+
+Maven: Its Basically a dev tool used to test the application build and create a build.
+
+Maven usage in automation
+Maven is a build testing tool, which will check the integration issue with the 
+framework component whenever multiple engineers integrate their work with the same framework.
+
+Integration issues might when engineers modify the code, 
+which might affect other java file, which is created by other engineers.
+
+Maven identifies such kind of issues and provide a msg called build failure/ build success.
+
+There are two plugins available in framework 
+1. Maven Cmd line plugin 
+2. Maven integration plugin
+
+
+Maven Cmd line plugin : It should be explicitly installed in the local system 
+which is used to handle the maven project in the cmd line 
+
+Installation steps:
+1) Go to google>search for download maven
+2) Click on first link, navigate to maven community
+3) Beside the binary, click on apache-maven-3.6.1-bin.zip
+4) download and extract the zip file
+5) Get inside the folder and copy the bin location
+6) Go to environment variables window in local system
+7) Go to system variables division, find and edit 'path' variable, enter new path =
+		C:\apache-maven-3.6.1\bin and click on Ok
+8) Go to user variable div, click on new and then create new M2_HOME =
+		C:\apache-maven-3.6.1
+9) Ensure JAVA_HOME is also available otherwise maven will not work
+10) Go to cmd, type mvn -version to check if maven is installed or not
+
+
+Maven Integration plugin
+Its a default plugin available in latest eclipse which is used to crete maven project thru eclipse
+
+Adv
+1. Has dependency feature, where we can download all dependent jar directly from the internet.
+2. It is a build testing tool used to check the integration issue and provide the status of the build.
+3. using maven we can run the test scripts in cmd line without eclipse
+4. Maven provides standard framework folder structure
+
+	
+
+What is maven dependency and how to handle maven dependency?
+Dependency is a feature available only in Maven which is used to 
+and download all the dependecy jar into local repo(C:/user/.m2).
+
+global repo(google-> mvn repository)
+
+In order to add dependency we should write dependecy code for webdriver, apache poi, 
+testNG etc inside POM.xml
+
+POM.xml Project Object Model is a configuration file for the maven which is used 
+to handle maven project in cmd line
+dependency code include group id, artifact id And version.
+groupid-name of the Group/community- From Where you are downloading
+artifact id - name of the project name in that Group/community- Which file you are downloading
+Version indicates version of the file which you want to download.
+
+
+	Maven Lifecycle
+	Maven Goals
+clean - This phase involves cleaning of the project (for a fresh build & deployment)
+compile - Compilation of the project source code.
+install	- Installing the application in the local repository. 
+	Any other project can use this as a dependency.
+test -	Executing/running the tests using some suitable test framework. 
+Note: For compile we download compiler plugin 
+      For test we need to download Mvn Surefire plugin 
+
+
+
+Ques : How to solve MojoFailureException when it says you are running on JRE rather than JDK ??
+Ans : Right click on JRE---properties---installed JREs
+----add--next---directory---select path of jdk---finish
+--select jdk instead of jre---click on apply and close
+---select workspace default JRE(jdk..)--click on apply and close
+
+

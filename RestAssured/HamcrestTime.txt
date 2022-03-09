@@ -1,0 +1,12 @@
+public class HamcrestTimeValidation {
+	
+	@Test
+	public void hamcrestvalidation()
+	{
+		when().get("http://localhost:8084/projects")
+		.then().assertThat().time(Matchers.lessThan(500L),TimeUnit.MILLISECONDS)
+		.log().all().
+		assertThat().body("[0].projectName", Matchers.equalTo("bangProj996"));
+	}
+
+}

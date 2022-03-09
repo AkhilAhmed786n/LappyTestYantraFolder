@@ -1,0 +1,129 @@
+ADB COMMANDS
+
+  1.adb start-server
+  2.adb kill-server
+  3.adb devices
+  4.adb install <path of the apk>
+  eg: adb install D:\abc.apk
+  5.adb uninstall <package name>
+  eg: adb uninstall com.abc.android
+  to see packages list
+  6.adb shell pm list packages 
+  multiple devices command
+  7.adb -s <device name/serial no> uninstall <package name>
+  eg: adb -s 27d0e054 uninstall com.abc.andriod
+  8.adb -s <device name/serial no> install <path of the apk>
+  eg: adb -s 27d0e054 install D:\abc.apk
+  9.adb connect <ip address>
+   eg: adb connect 192.168.0.129:5555
+  10.adb disconnect
+   push->pc to mobile
+   pull  ->mobile to pc
+   11. adb push <pc path/from path> /sdcard(mobile path)
+    eg:   adb push C:\abc.apk /sdcard
+   12. adb pull /sdcard(mobile path) <pc path/to path>
+    eg:   adb pull /sdcard/abc.apk C:\apps
+    displays device serial number & model name
+    13. adb devices -l
+    display serial number
+    14.adb get-serialno
+
+
+     updating the app
+    15.adb install -r <path of the apk>
+     eg:    adb install -r D:\abc1.apk
+
+    1 device & 1 emulator
+
+   to install apk to device
+    16. adb install -d <path of apk>
+   to install apk to emulator
+    17. adb install -e <path of apk>
+
+   2 devices & 1 emulator
+    18. adb install -s <serial no> <path of apk>
+    dumps system logs including stack traces when device is crashed
+    19. adb logcat <package name> > (D:\adh.txt)path
+                                           or
+          adb logcat > (D:\adh.txt)path
+     clear all logs
+     20. adb logcat -c
+
+IN LOGS
+W means warning
+I info
+E means
+
+Shell commands
+    to take screenshots
+    21. adb shell screencap <destination folder>
+    Eg: adb shell screencap /sdcard/abc.png
+     to take screenrecording
+     22. adb shell screenrecord <destination folder>
+     Eg :adb shell screenrecord /sdcard/and.mp4
+     to record up to any seconds
+     23. adb shell screenrecord /sdcard/koko.mp4 --time-limit 50
+     to rotate screen
+     24. adb shell screenrecord /sdcard/and.mp4 --rotate
+     to list out the packages into a file
+     25. adb shell pm list packages > pack.txt
+
+   Dumpsys - tool runs in android device & provides device info like battery, CPU, Memory, Network 
+     26. adb  shell dumpsys > dump.txt(file name)
+
+   Battery stats
+   to reset battery stats
+   27.adb shell dumpsys batterystats --reset
+after doing this, disconnect phone from pc & use the particular app for some time, then connect phone again & execute
+   28. adb shell dumpsys batterystats (package) > batterystats.txt
+    memory info
+    29. adb shell dumpsys meminfo (package)
+    app graphics acceleration info
+    30. adb shell dumpsys gfxinfo (package)
+    
+key events (without touching the phone using it)
+    31. adb shell input keyevent 3(redirect to homepage)
+    32. adb shell input keyevent 4(come back to previous tab)
+    33. adb shell input keyevent 27(screenshot)
+    34. adb shell input keyevent 85(play & pause)
+    35. adb shell input keyevent 86(pause)
+    36. adb shell input keyevent 64 (browser)
+    37. adb shell input keyevent 208 (calendar)
+    38. adb shell input keyevent 221 (brightness increase)
+    39. adb shell input keyevent 220(brightness decrease)
+
+
+adhoc testing
+   40. adb shell monkey -p <package name> -v(click on random) 500 -s(no.of times) 100000 
+
+
+
+
+
+
+
+
+
+INTERVIEW QUESTIONS: -
+
+1. What are the different types of mobiles apps are available?
+2. How do you take logs?
+3. How do you take logs iOS?
+Ans: Using XCode, In device
+4. Different between Native & Hybrid apps
+5. Tell me some adb commands which u have used?
+6. What is the file extension used for ANdriod & iOS?
+7. Which is the latest andriod & iOS version?
+8. how do u capture battery stats?
+9. Emulator & Simulator
+10. If i provide u an app how do u test?what is ur approach?
+11. Different ways of installing an app
+12. Interruption testing, how u do it?
+13. UI testing?
+14. How were u getting the requirement to test the app?
+15. How the build was provided for testing?
+16. Diff bw Web app and Mobile app
+17. Can u tell us hw were u logging the defect for mobile app
+18. What is crash?How were u capturing it?
+19. How do u identify crash in logcat/logs?
+20.How do u tell that u hav used Native app/Hybrid app/Cross platform app?

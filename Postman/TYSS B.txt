@@ -1,0 +1,167 @@
+There are 9 HTTP request methods:
+
+- GET
+- PUT
+- POST
+- HEAD
+- TRACE
+- PATCH
+- DELETE
+- OPTIONS
+- CONNECT
+
+Let's talk about them in a bit more detail.
+
+HTTP request methods are the actions initiated from the client-side to perform certain actions.
+
+These HTTP request methods are sometimes called nouns or referred to as HTTP verbs.
+
+📌 GET
+
+The GET method is the most common of all these request methods. It is used to get the desired resources from the server.
+
+The GET methods don't affect the state of the server.
+
+📌 POST
+
+The POST method is used to submit the information to the server. As we're submitting data, the POST method often changes the state of the server.
+
+📌 PUT
+
+The PUT method is used whenever you need to change the resource. The resource, is already a part of resource collection.
+
+📌 PATCH
+
+The PATCH request method is used to modify only the necessary part of the data or response. The PATCH method doesn't modify the entire response.
+
+📌 HEAD
+
+The server sends the response without the body. The HEAD method asks for a response identical to a GET request, but it is faster as small data is transferred.
+
+📌 DELETE
+
+As the name says, the DELETE request method is used to delete the specified resource. It requests that the origin server delete the resource identified by the Request-URL.
+
+📌 CONNECT
+
+The CONNECT method establishes two-way communication between the client and the requested resource.
+
+CONNECT request method is used to push your proxy to start an HTTP tunnel.
+
+📌 OPTIONS
+
+The OPTIONS method is used to describe the communication options available for the target resource. The client can either specify a URL for describing the communication options available for a specific resource or an asterisk (*) if they want to target the server.
+
+📌 TRACE
+
+The TRACE method is generally used for debugging. It performs a message loop-back test along the path to the desired data.
+
+___________________________________________________________________________________________
+STATUS CODES
+------------
+
+HTTP status codes are pretty confusing sometimes. Here are a few widely used HTTP status codes.
+
+📌 informational response (1xx)
+Informational responses indicate the acceptance and continuation of the requests.
+
+▪️ 100 Continue
+The server tells the client that everything is OK so far keeps sending requests.
+
+
+📌 Successful Responses (2xx)
+As the term suggests, these status codes indicate that the request is successfully received, accepted, and resolved.
+
+▪️ 200 Ok
+This status code indicates the successful HTTP request. It's a standard successful response for GET, POST, PUT, HEAD, and TRACE.
+
+▪️ 201 Created
+This status code is sent by the server to indicate that a new resource has been created. Generally used for the POST and PUT requests.
+
+▪️ 202 Accepted
+Typically used for the async response. The server confirms to the client that the request has been accepted.
+
+▪️ 204 No Content
+The server indicates that all is good but nothing to return.
+
+
+📌 Redirection messages (3xx)
+The server usually returns a 3xx redirection status code to indicate that some additional action has to be done by the client to fulfill the request.
+
+▪️ 301 Moved Permanently
+The server sends the new URL with a 301 status code if the requested URL has been shifted to a new URL.
+
+▪️ 304 Not Modified
+304 Indicates that the resources are the same since the last visit. In this case, the client can use the cached resources.
+
+📌 Client Error Responses (4xx)
+The server usually returns 4xx status codes if a client request causes some problem.
+
+▪️ 400 Bad Request
+Incorrect syntax or invalid URLs are generally the reason for 400 Bad Request.
+
+▪️ 401 Unauthorized
+The server returns 401 to indicate that the client should authenticate itself before making requests.
+
+▪️ 403 Forbidden
+The client is authenticated but doesn't have permission to access the resource.
+
+▪️ 404 Not Found
+We see a 404 response most often. It means that the requested URL is not valid.
+
+▪️ 429 Too Many Requests
+The client has sent too many requests in the given time frame. For example, the server only handles 100 requests per second.
+
+
+📌 Server error responses (5xx)
+The 5xx status codes indicate that everything is excellent with the request, but an error occurred on the server-side.
+
+▪️ 500 Internal Server Error
+An unexpected situation occurs which server can't handle at this moment.
+
+▪️ 503 Service Unavailable
+Usually, when the server is down for maintenance, the server returns 503 indicating server is not ready to handle the request.
+
+___________________________________________________________________________________________
+
+What exactly is an API?
+
+API is the acronym for Application Programming Interface.
+In simple terms, API is an interface that lets your application talk to another application.
+
+API is a set of definitions and protocols that allow technology products and services to communicate.
+
+This may not sound very clear. Let's break it down.
+
+Imagine you are building a finance app, and when a user signs up, you want to check if their email is valid.
+
+How would you do that?
+
+There's pretty complicated logic that goes into validating an email address.
+You'd check the format of string (does it have an @ sign?), you would ping the domain to make sure it runs an email server, and check a couple of blocklists to make sure it's not a backlisted address.
+
+Building and maintaining an email validation service like this might be time-consuming.
+
+Wouldn’t you instead spend time improving your business or product?
+
+This is where APIs can help.
+
+You can rely on an API to validate your users’ email IDs. The next step is to find such fully functional and secure APIs.
+
+RapidAPI has more than 35,000 APIs you can choose from.
+
+APIs are so powerful and help developers in four broader ways.
+
+1️⃣ APIs increase the development speed
+Developers spend less time implementing trivial features and more time focusing on their essential business.
+
+2️⃣ APIs reduce the overall software cost
+Your development cost decreases when you need to implement and maintain less code (relying on APIs).
+
+3️⃣ APIs can increase the quality of the software
+Using a good API can make your software better.
+Each API component is developed by a business primarily focused on making it the best possible solution rather than one team that has to be good at many things.
+
+4️⃣ APIs yield new possibilities
+Implementing new features in software or product is much easier using APIs.
+You could integrate ML or AI models using a few lines of code that would have probably taken a bunch of time if you built that from scratch.

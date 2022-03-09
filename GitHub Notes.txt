@@ -1,0 +1,104 @@
+
+Source Control Tool/Configuration Management Tool/Version Control Tool/Source Code Management Tool
+. GitHub
+. SVN(Sub Version)
+. CVS(Concurrent Version System)
+. Perforce
+
+
+Its a decentralised repo in which source code of the framework can be stored. 
+It provides web Ui, can be easily accessible anywhere in the world thru internet
+There are two plugins available in Git.
+1. GitHub
+2. Git
+
+GitHub: Its a cloud based de-centralized repo, 
+where we shud create an account with github community in order to use it
+Basically github is a storage where we can create our own repo, 
+that repo can hold the data (Based on money you pay, you get space-10GB-10TB etc) 
+that is being shared across the world.
+
+Adv of GitHUb:
+1. Its a cloud based de-centralized repo.
+2. No need to invest money for physical hardware.
+3. No need of admin to maintain the storage.
+4. It Provides web Interface.
+5. can be easily accessible anywhere in the world thru internet.
+6. It provides security and backup facility.
+
+
+Git:
+
+Its a client plugin which shud be installed in local system which is used to access github over the internet.
+Without Git plugin we cant communicate to github.
+There are many plugins available in market.
+1. E-Git(Eclipse-Git) - Default plugin for latest eclipse.
+2. Git-Bash(cmd prompt)
+3. Git Desktop(cmd prompt)
+
+
+
+How to create account with GitHub?
+Go to google, search for github login
+Navigate to https: github.com/login
+Click on create an account by providing the details 
+
+
+How to create a repo in github?
+Login to github
+1. Go to + drop down menu and click on new repo
+2. Give Repo Name and click on checkbox initialise repo with readme
+3. Go to Code dropdown and copy the git repo url - 
+	https://github.com/raghavendravinayb/ActitimeRepo.git
+username: 
+password: 
+
+How to share existing framework in eclipse thru git.
+
+1. Select the project, Right Click --> Team --> Share Project, create(Path)-finish-finish
+NO-HEAD means succussfully shared
+
+How to transfer framework from working directory to git
+select proj-> right click-> Team-> Commit
+Go to Git Staging window, drag all the files from unstaged area to staged area->
+Give commit message->Commit
+
+
+Transferring framework from local repo to global;
+right click on Project-> team-> push branchmaster
+
+
+How to get the framework from global repo into local system?
+Pre-Cond: Make sure you have git username and pwd
+1. Go to Eclipse, file-> import
+2. expand git-> Proj from git
+3. Clone Uri ->URI-> un pw-> next next finish
+
+
+
+How to transfer newly created file from local repo to global repo
+select new file -> right click -> commit..
+Go to git staging window , drag all the files from unstaged area to staged area
+->commit message->click on commit and push
+
+how to get new files available in github to local?
+select the proj-> right click - team - pull
+
+
+
+
+
+
+
+
+
+
+when you will get conflicts in github and how to resolve?
+whenever two eng modifies the same file, when you try to commit that file into github ull get conflict.
+In order to resolve this problem, pull the fw using rebase option.
+
+
+
+
+
+

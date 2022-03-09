@@ -1,0 +1,103 @@
+For Reverse of String:
+----------------------
+public class Reverse_of_String()
+{
+public static void main(String args[])
+{
+String name="AkHIL";
+String rev="";
+for(int i=name.length()-1;i>=0; i--)
+{
+rev=rev+name.charAt(i);
+
+}
+System.out.println(rev);
+}
+}
+
+
+For Palindrome of String:
+-------------------------
+
+Public class Reverse
+{
+public static void main(String args[])
+{
+String name="madam";
+String rev="";
+
+for(int i=name.length()-1;i>=0;i--)
+{
+rev=rev+name.charAt(i);
+
+}
+System.out.println(rev);
+if(name.equals(rev))
+{
+System.out.println(rev+" is a palindrome String");
+}
+else
+{
+System.out.println(rev+" is not palindrome String");
+}
+}
+}
+
+Armstrong prog:
+----------------
+Public class Reverse
+{
+public static void main(String args[])
+{
+int num=153;arm=0;rem;
+int a=num;
+while(num>0)
+{
+rem=num%10;
+num=num/10;
+arm=arm+(rem*rem*rem);
+
+}
+System.out.println("Actual number is :"+a);
+System.out.println("individual cube & sum result is:"+arm);
+}
+}
+
+MultiplePrimeChekching:
+------------------------
+public class MultiplePrimenumber
+{
+public static void main(String []args)
+{
+
+int num=29;
+int total=0;
+for(int i=1;i<)
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

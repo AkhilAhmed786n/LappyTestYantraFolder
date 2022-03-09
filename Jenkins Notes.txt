@@ -1,0 +1,102 @@
+Jenkins:
+● It is a continuous integration and continuous deployment tool.
+● In case of development, jenkins will be used to automate build creation and build testing and
+build deployment process so it is called continuous deployment tool.
+
+Jenkins usage in automation:
+● In Automation, jenkins will be used in continuous integration process, it means jenkins will
+always monitor the framework in git location, automatically creates a build and 
+provides email notification if any changes had happened in the build.
+● Jenkins can also be used to execute all the test scripts whenever new build arrives to testing
+environment.
+
+Jenkins provides three levels of execution:
+1) On-demand
+2) On-schedule
+3) Poll-SCM (source code management)
+
+1) On Demand:
+● Based on the customer demand, login to jenkins and start the execution
+2) On Schedule:
+● Based on the schedule time which is given in the configure area, jenkins automatically triggers
+build
+3) Poll SCM:
+● Poll means continuously monitor the framework or application in git location, it automatically
+starts the execution whenever any changes happen in the framework or testing server
+
+Note: Whenever jenkins starts the job execution, it will connect to git and download the entire
+framework (build) into the local system and test the build by taking help of maven and execute all the
+test scripts and sends out an email.
+
+
+Installation steps of jenkins:
+● Go to google>search download jenkins>click on first link and click on windows option
+● Download the exe file and install
+● After installation in order to open jenkins, http://localhost:8080
+
+Jenkins Plugins:
+● Before creating a project in jenkins make sure below plugins are installed in jenkins
+● Login to jenkins, go to manage jenkins> click on manage plugin>Click on 'Available' tab
+	Download 
+a) Maven integration plugin
+b) Github integration plugin
+
+Jenkins Environment Variables:
+● After the installation of the plugin, make sure environment variables are added for java, maven
+and git
+● Login to jenkins>manage jenkins>Global tool configuration> jdk>  unselect install
+automatically> give name as JAVA_HOME and location of JDK
+
+Git -->  C:\Program Files\Git\bin\git.exe
+
+● Do the same as above for Git and maven
+
+Git.exe path
+MAVEN_HOME
+
+Click on Save to save all the changes
+
+
+How to create a project or job in jenkins:
+1) Login to jenkins
+2) Click on new item, select maven project and click on OK
+
+How to configure git project/framework location in jenkins project or job?
+● Login to jenkins>Click on Project name> click on configure link
+● find and click git radio button under 'Source Code Management' section
+● provide git url(Take it from 'code' of Github)
+● click on add button, provide git username and password
+● Select username and password from the credential dropdown
+● Scroll down, find build division
+● Enter in root POM: Projectname(Path)/pom.xml
+● Goals and options: test
+● Click on save and click on build now
+
+
+
+How to configure schedule:
+1) Login to jenkins
+2) Go to configure file of the job
+3) Scroll down and select build periodically checkbox under Build Triggers Section
+4) Provide a time with respect to (min hour date month day)
+
+(31 09 04 07 06)
+Here it indicates 4th July Saturday 9:31 hrs
+*Min (0-59)
+*Hour (0-23)
+*Date Of Month(1-31)
+*Month (1-12)
+*DOW (0-7) where 0 and 7 are sundays
+
+How to configure Poll SCM?
+1) Go to project configure file
+2) Select Poll SCM checkBox and provide 5 star separated by space(* * * * *)
+	* means any minute, any day, any hour etc...
+
+How to configure email?
+1) Go to jenkins project configure file
+2) select email notification checkbox at the end of the page
+3) Provide recipients
+
+Note: In order to configure email notification, we should provide company SMTP credentials in global
+configuration file

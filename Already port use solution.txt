@@ -1,0 +1,4 @@
+When 8084 port is already in use then change the port by using this Syntax:
+-----------------------------------------------------------------------------
+java -Dserver.port=8085 -jar (path of app)
+
