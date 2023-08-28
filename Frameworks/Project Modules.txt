@@ -1,0 +1,37 @@
+Oppurtunity
+Organisation
+Sales
+Contacts
+Payment
+
+Mahesh projecct:
+-----------------
+
+1. Business workflow starts by the manager where manager comes up with different strategies to advertise the product to end users is called campaign.
+Note: deliver the products to showroom.
+Strategy: pamphlets, banners, tv ads, newspaper ads. Social media, shopping malls advertising, etc
+2. Every campaign consists 2 workflows:
+2.1 create an event ->meeting which is scheduled for the task. Sales rep<->manager
+2.2 create a task->offers/discounts -> sales rep and manager àend users
+3. Manager also tracks an estimated/expected response count.(6000)
+4. Manager assign the campaigns to different sales executive.
+5. Sales representative started the campaign
+6. Sales representative collects the information of end users-> LEADS
+7. Sales rep share the collected leads details to manager of the showroom.
+8. Manager and team will start connecting to the leads.
+9. There are 2 classifications of leads :
+9.1 Junk leads ->not responded, not connected, switched , not interested etc
+9.2 Potential leads ->yes I m ready to buy product, negotiation , showed interest in buying the product etc
+10. Potential lead request for a quotation
+11. Manager will generate a quotation and assign to the potential lead.
+Note: junk leads can be also converted to potential lead and also vice versa.
+Potential lead: further workflow
+12. Potential will place the order to the manager (purchase order).
+13. Manager will create/convert the purchase order to sales order (inventory purpose for the showroom).
+Out of stock: insufficient quantity of product in showroom.
+​14. Manager creates a new document called as purchase order
+​15. Send the purchase order to the manufacturing unit
+​16. Manufacturing unit deliver the order to the showroom.
+ 
+Sufficient quantity in showroom:
+17. Manager generate invoice and deliver the purchase order to the potential lead(payment done by customer and
